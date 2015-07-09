@@ -3,7 +3,7 @@ class CreateBeerStyles < ActiveRecord::Migration
     create_table :beer_styles do |t|
       t.string :style
       t.string :style_note
-      t.string :beer_flavour_val
+      t.integer :beer_flavour_val
 
       t.timestamps null: false
     end

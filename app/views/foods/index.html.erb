@@ -1,0 +1,12 @@
+<h1>Hello Beer and food</h1>
+  <div>
+    <% @foods.each do |food| %>
+      <div class="food_list_div">
+        <ul class="ul_list">
+          <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'New Food', new_food_path, remote: true %>
