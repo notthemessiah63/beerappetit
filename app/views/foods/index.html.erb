@@ -9,4 +9,18 @@
     <% end %>
   </div>
 
-  <%= link_to 'New Food', new_food_path, remote: true %>
+  <button class="food-entry-form">New Food</button>
+  <div class="new-food hidden">
+    <%= form_for @food do |form| %>
+      
+      <li><%= form.label :name, :class => 'input_label' %></li>
+      <li><%= form.text_field :name, :class => 'input1' %></li>
+
+      <li><%= form.label :food_notes, :class => 'input_label' %></li>
+      <li><%= form.text_area :food_notes, :class => 'input1' %></li>
+
+      <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
+      
+
+    <% end %>
+  </div>

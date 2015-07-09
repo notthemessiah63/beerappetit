@@ -99,19 +99,19 @@ bs56 = BeerStyle.create(style: 'Dortmunder', style_note: 'Made popular in the 19
 
 
 # create 'beer' objects
-# b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '6.3', beer_note: 'Broadside is brewed to commemorate the Battle of Sole Bay (1672). This dark ruby red beer is full of fruitcake flavours and is great savoured with some strong cheddar.', beer_styles_id: bs1.id, image: 'adnams_broadside.jpg',beer_flavour_val:4)
-# b2 = Beer.create(brewer: 'Theakstons',name: 'Old Peculier', abv: '5.6', beer_note: 'The 5.6% beer that made Masham famous! 
-# A rich, dark, smooth-tasting beer with an unequalled flavour. Brewed using the traditional Fuggle hop, Old Peculier is our best known beer and has a large and enthusiastic following all over Britain and around the world
+b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '6.3', beer_note: 'Broadside is brewed to commemorate the Battle of Sole Bay (1672). This dark ruby red beer is full of fruitcake flavours and is great savoured with some strong cheddar.', beer_styles_id: bs1.id, image: 'adnams_broadside.jpg',beer_flavour_val:4)
+b2 = Beer.create(brewer: 'Theakstons',name: 'Old Peculier', abv: '5.6', beer_note: 'The 5.6% beer that made Masham famous! 
+A rich, dark, smooth-tasting beer with an unequalled flavour. Brewed using the traditional Fuggle hop, Old Peculier is our best known beer and has a large and enthusiastic following all over Britain and around the world
 
-# ', beer_styles_id: bs2.id, image: 'theak_old_peculier.jpg',beer_flavour_val:3)
-# b3 = Beer.create(brewer: 'Badger',name: 'Fursty Ferret', abv: '4.4', beer_note: 'Moreish & malty beer
+', beer_styles_id: bs2.id, image: 'theak_old_peculier.jpg',beer_flavour_val:3)
+b3 = Beer.create(brewer: 'Badger',name: 'Fursty Ferret', abv: '4.4', beer_note: 'Moreish & malty beer
 
-# As the story goes, at one Dorset inn, inquisitive ferrets used to sneak a sample of their local brew. The sweet nutty palate, hoppy aroma and hint of Seville oranges give this tawny ale its distinctive personality. Perfect with a creamy Cheddar or indulgent pork pies.', beer_styles_id: bs19.id, image: 'badger_fursty_ferret.jpg',beer_flavour_val:2)
-# b4 = Beer.create(brewer: 'Adnams',name: 'Innovation', abv: '6.7', beer_note: 'Originally brewed as a one off to celebrate the opening of our new brewhouse and our new distribution centre, it is now one of our permanent beer. The beer was created under the direction of our Chairman, Jonathan Adnams, whose instruction was to ‘Brew something to wow me’. 
+As the story goes, at one Dorset inn, inquisitive ferrets used to sneak a sample of their local brew. The sweet nutty palate, hoppy aroma and hint of Seville oranges give this tawny ale its distinctive personality. Perfect with a creamy Cheddar or indulgent pork pies.', beer_styles_id: bs19.id, image: 'badger_fursty_ferret.jpg',beer_flavour_val:2)
+b4 = Beer.create(brewer: 'Adnams',name: 'Innovation', abv: '6.7', beer_note: 'Originally brewed as a one off to celebrate the opening of our new brewhouse and our new distribution centre, it is now one of our permanent beer. The beer was created under the direction of our Chairman, Jonathan Adnams, whose instruction was to ‘Brew something to wow me’. 
 
-# It came first in its class at the 2008 World beer awards and has also won a Gold medal at the 2008 BBI (British Bottlers Institute) awards.', beer_styles_id: bs8.id, image: 'ai-s.jpg',beer_flavour_val:5)
-# b5 = Beer.create(brewer: 'Sierra Nevada',name: 'Bigfoot', abv: '6.7', beer_note: 'No notes at this time', beer_styles_id: bs2.id, image: 'sierra_nevada_bigfoot.jpg',beer_flavour_val:4)
-# b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note: 'Southwold Jack is one of Adnams oldest & most loyal figureheads, that is why we have chosen him to be the icon for one of our most famous beers. Southwold Bitter is a beautiful copper coloured beer with a distinctive, lingering hoppiness.', beer_styles_id: bs14.id, image: 'adnams_bitter.jpg',beer_flavour_val:3)
+It came first in its class at the 2008 World beer awards and has also won a Gold medal at the 2008 BBI (British Bottlers Institute) awards.', beer_styles_id: bs8.id, image: 'ai-s.jpg',beer_flavour_val:5)
+b5 = Beer.create(brewer: 'Sierra Nevada',name: 'Bigfoot', abv: '6.7', beer_note: 'No notes at this time', beer_styles_id: bs2.id, image: 'sierra_nevada_bigfoot.jpg',beer_flavour_val:4)
+b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note: 'Southwold Jack is one of Adnams oldest & most loyal figureheads, that is why we have chosen him to be the icon for one of our most famous beers. Southwold Bitter is a beautiful copper coloured beer with a distinctive, lingering hoppiness.', beer_styles_id: bs14.id, image: 'adnams_bitter.jpg',beer_flavour_val:3)
 
 
 
@@ -127,5 +127,5 @@ f4 = Food.create(name: 'Beef wellington', food_notes: 'This recipe is a nod to t
 # #Method 2
 # o2 = Order.create(order_reference: 'fj#4fsew', amount: 70, customer_id: c2.id)
 # o1.order_products.create(product_id: p3.id)
-# f1.matches.create(beer_id: b1.id, match_note: 'This spag bol went well with Adnams Broadside, both rather robust flavours')
-# f1.matches.create(beer_id: b2.id, match_note: 'Spaghetti bolognaise, strangely goes nicely with a spot of Old peculiar')
+f1.matches.create(beer_id: b1.id, match_note: 'This spag bol went well with Adnams Broadside, both rather robust flavours')
+f1.matches.create(beer_id: b2.id, match_note: 'Spaghetti bolognaise, strangely goes nicely with a spot of Old peculiar')

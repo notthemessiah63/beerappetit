@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  console.log("document ready")
+  $('.food-entry-form').on('click', function(){
+    console.log('clicked new food')
+    $('.new-food').toggleClass('hidden active');
+  })
+})
