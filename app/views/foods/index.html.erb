@@ -1,19 +1,5 @@
 <h1>Hello Beer and food</h1>
-  <div>
-    <% @foods.each do |food| %>
-      <div class="food_list_div">
-        <ul class="ul_list">
-          <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
-        </ul>
-      </div>
-    <% end %>
-  </div>
-
-<div id="the-basics">
-  <input class="typeahead" type="text" placeholder="States of USA">
-</div>
-
-  <button class="food-entry-form">New Food</button>
+<button class="food-entry-form">New Food</button>
   <div class="new-food hidden">
     <%= form_for @food do |form| %>
       
@@ -40,3 +26,16 @@
 
     <% end %>
   </div>
+  <div>
+    <% @foods.each do |food| %>
+      <div class="food_list_div">
+        <ul class="ul_list">
+          <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+<%= select_tag "food_id", options_from_collection_for_select(Food.all, "id", "name") %>
+
+  

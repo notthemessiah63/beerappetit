@@ -1,8 +1,9 @@
 <h2 class='page_hdr'>Food pairings - <%= @food.name %></h2>
 <container class='siz30l'>
   <div>
-    <p><%= @food.name %></p>
-    <p><%= @food.food_flavour_val %></p>
+    <p>Food               :<%= @food.name %></p>
+    <p>Cuisine/Type       : <%= @food.food_style.style %></p>
+    <p>Food flavour value :<%= @food.food_flavour_val %></p>
     <p><%= @food.food_notes %></p>
   </div>
 </container>
