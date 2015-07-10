@@ -17,8 +17,15 @@
 
 $(document).ready(function() {
   console.log("document ready")
+  // views foods index.html.erb
   $('.food-entry-form').on('click', function(){
     console.log('clicked new food')
     $('.new-food').toggleClass('hidden active');
+  })
+
+  // views beers index.html.erb
+  $('.beer-entry-form').on('click', function(){
+    console.log('clicked new beer')
+    $('.new-beer').toggleClass('hidden active');
   })
 })

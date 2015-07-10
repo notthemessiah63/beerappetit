@@ -9,6 +9,10 @@
     <% end %>
   </div>
 
+<div id="the-basics">
+  <input class="typeahead" type="text" placeholder="States of USA">
+</div>
+
   <button class="food-entry-form">New Food</button>
   <div class="new-food hidden">
     <%= form_for @food do |form| %>
@@ -19,8 +23,20 @@
       <li><%= form.label :food_notes, :class => 'input_label' %></li>
       <li><%= form.text_area :food_notes, :class => 'input1' %></li>
 
+      <li>
+        <%= form.label(:food_flavour_val, "One") %>
+        <%= form.radio_button(:food_flavour_val, 1) %>
+        <%= form.label(:food_flavour_val, "Two") %>
+        <%= form.radio_button(:food_flavour_val, 2) %>
+        <%= form.label(:food_flavour_val, "Three") %>
+        <%= form.radio_button(:food_flavour_val, 3) %>
+        <%= form.label(:food_flavour_val, "Four") %>
+        <%= form.radio_button(:food_flavour_val, 4) %>
+        <%= form.label(:food_flavour_val, "Five") %>
+        <%= form.radio_button(:food_flavour_val, 5) %>
+      </li>
+
       <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
-      
 
     <% end %>
   </div>

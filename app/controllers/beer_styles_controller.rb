@@ -4,7 +4,7 @@ class BeerStylesController < ApplicationController
     respond_to do |format|
       format.html
       format.json
-      @beer_styles = Beer_style.new
+      @beer_style = BeerStyle.new
     end
   end
 

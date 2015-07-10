@@ -99,30 +99,31 @@ bs56 = BeerStyle.create(style: 'Dortmunder', style_note: 'Made popular in the 19
 
 
 # create 'beer' objects
-b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '6.3', beer_note: 'Broadside is brewed to commemorate the Battle of Sole Bay (1672). This dark ruby red beer is full of fruitcake flavours and is great savoured with some strong cheddar.', beer_styles_id: bs1.id, image: 'adnams_broadside.jpg',beer_flavour_val:4)
+b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '6.3', beer_note: 'Broadside is brewed to commemorate the Battle of Sole Bay (1672). This dark ruby red beer is full of fruitcake flavours and is great savoured with some strong cheddar.', beer_style_id: bs1.id, image: 'adnams_broadside.jpg',beer_flavour_val:4)
 b2 = Beer.create(brewer: 'Theakstons',name: 'Old Peculier', abv: '5.6', beer_note: 'The 5.6% beer that made Masham famous! 
 A rich, dark, smooth-tasting beer with an unequalled flavour. Brewed using the traditional Fuggle hop, Old Peculier is our best known beer and has a large and enthusiastic following all over Britain and around the world
 
-', beer_styles_id: bs2.id, image: 'theak_old_peculier.jpg',beer_flavour_val:3)
+', beer_style_id: bs2.id, image: 'theak_old_peculier.jpg',beer_flavour_val:3)
 b3 = Beer.create(brewer: 'Badger',name: 'Fursty Ferret', abv: '4.4', beer_note: 'Moreish & malty beer
 
-As the story goes, at one Dorset inn, inquisitive ferrets used to sneak a sample of their local brew. The sweet nutty palate, hoppy aroma and hint of Seville oranges give this tawny ale its distinctive personality. Perfect with a creamy Cheddar or indulgent pork pies.', beer_styles_id: bs19.id, image: 'badger_fursty_ferret.jpg',beer_flavour_val:2)
+As the story goes, at one Dorset inn, inquisitive ferrets used to sneak a sample of their local brew. The sweet nutty palate, hoppy aroma and hint of Seville oranges give this tawny ale its distinctive personality. Perfect with a creamy Cheddar or indulgent pork pies.', beer_style_id: bs19.id, image: 'badger_fursty_ferret.jpg',beer_flavour_val:2)
 b4 = Beer.create(brewer: 'Adnams',name: 'Innovation', abv: '6.7', beer_note: 'Originally brewed as a one off to celebrate the opening of our new brewhouse and our new distribution centre, it is now one of our permanent beer. The beer was created under the direction of our Chairman, Jonathan Adnams, whose instruction was to ‘Brew something to wow me’. 
 
-It came first in its class at the 2008 World beer awards and has also won a Gold medal at the 2008 BBI (British Bottlers Institute) awards.', beer_styles_id: bs8.id, image: 'ai-s.jpg',beer_flavour_val:5)
-b5 = Beer.create(brewer: 'Sierra Nevada',name: 'Bigfoot', abv: '6.7', beer_note: 'No notes at this time', beer_styles_id: bs2.id, image: 'sierra_nevada_bigfoot.jpg',beer_flavour_val:4)
-b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note: 'Southwold Jack is one of Adnams oldest & most loyal figureheads, that is why we have chosen him to be the icon for one of our most famous beers. Southwold Bitter is a beautiful copper coloured beer with a distinctive, lingering hoppiness.', beer_styles_id: bs14.id, image: 'adnams_bitter.jpg',beer_flavour_val:3)
+It came first in its class at the 2008 World beer awards and has also won a Gold medal at the 2008 BBI (British Bottlers Institute) awards.', beer_style_id: bs8.id, image: 'ai-s.jpg',beer_flavour_val:5)
+b5 = Beer.create(brewer: 'Sierra Nevada',name: 'Bigfoot', abv: '6.7', beer_note: 'No notes at this time', beer_style_id: bs2.id, image: 'sierra_nevada_bigfoot.jpg',beer_flavour_val:4)
+b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note: 'Southwold Jack is one of Adnams oldest & most loyal figureheads, that is why we have chosen him to be the icon for one of our most famous beers. Southwold Bitter is a beautiful copper coloured beer with a distinctive, lingering hoppiness.', beer_style_id: bs14.id, image: 'adnams_bitter.jpg',beer_flavour_val:3)
 
 
-
-
+fs1 = FoodStyle.create(style:'British', style_note:'traditional British food including stews, pies, and hearty soups', food_flavour_val: 3)
+fs2 = FoodStyle.create(style:'Italian', style_note:'Italian food including pasta dishes, with a leaning toward vegetables and garlic', food_flavour_val: 4)
+fs3 = FoodStyle.create(style:'Indian', style_note:'Indian food including curried dishes, spicy with a leaning toward and garlic and chili', food_flavour_val: 5)
 
 
 # create food objects
-f1 = Food.create(name: 'Spaghetti bolognaise', food_notes: 'My very best Spaghetti Bolognese, gorgeously meaty with a chilli kick!',food_flavour_val:4)
-f2 = Food.create(name: 'Chicken Korma', food_notes: 'Coconut and almonds give this mild korma its distinctive richness. Take a few minutes to prepare it, then leave it in the oven to cook. Serve with basmati rice or warm naan bread. Delicious!',food_flavour_val:2)
-f3 = Food.create(name: 'Shepherds pie', food_notes: 'A classic shepherds pie recipe with beautiful lamb shoulder instead of mince – made for rainy days! Topped with rosemary-spiked creamy mash',food_flavour_val:3)
-f4 = Food.create(name: 'Beef wellington', food_notes: 'This recipe is a nod to the traditional beef Wellington, but I used minced beef instead of beef fillet and throwing in a hint of chilli and cumin for an updated flavour. You could also use pork mince, lamb mince or even a mixture, and, during the season, make it even more interesting by adding some game. And, as you have probably noticed, I have decided to make mine into individual rolls, so everyone gets their own. What a treat!',food_flavour_val:4)
+f1 = Food.create(name: 'Spaghetti bolognaise', food_notes: 'My very best Spaghetti Bolognese, gorgeously meaty with a chilli kick!',food_flavour_val:4, food_style_id:fs2.id)
+f2 = Food.create(name: 'Chicken Korma', food_notes: 'Coconut and almonds give this mild korma its distinctive richness. Take a few minutes to prepare it, then leave it in the oven to cook. Serve with basmati rice or warm naan bread. Delicious!',food_flavour_val:2, food_style_id:fs3.id)
+f3 = Food.create(name: 'Shepherds pie', food_notes: 'A classic shepherds pie recipe with beautiful lamb shoulder instead of mince – made for rainy days! Topped with rosemary-spiked creamy mash',food_flavour_val:3, food_style_id:fs1.id)
+f4 = Food.create(name: 'Beef wellington', food_notes: 'This recipe is a nod to the traditional beef Wellington, but I used minced beef instead of beef fillet and throwing in a hint of chilli and cumin for an updated flavour. You could also use pork mince, lamb mince or even a mixture, and, during the season, make it even more interesting by adding some game. And, as you have probably noticed, I have decided to make mine into individual rolls, so everyone gets their own. What a treat!',food_flavour_val:4, food_style_id:fs1.id)
 
 # #Method 2
 # o2 = Order.create(order_reference: 'fj#4fsew', amount: 70, customer_id: c2.id)

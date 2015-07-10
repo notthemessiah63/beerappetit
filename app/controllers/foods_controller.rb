@@ -13,7 +13,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    food = Food.create params[:food].permit(:name, :style_note)
+    food = Food.create params[:food].permit(:name, :food_notes, :food_flavour_val)
     if food.save
       redirect_to foods_path
     else

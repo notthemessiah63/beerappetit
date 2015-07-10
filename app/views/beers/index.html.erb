@@ -1,0 +1,39 @@
+<h2 class='page_hdr'>Beers</h2>
+  <button class="beer-entry-form">New Beer</button>
+  <div class="new-beer hidden">
+    <%= form_for @beer do |form| %>
+      
+      <li><%= form.label :name, :class => 'input_label' %></li>
+      <li><%= form.text_field :name, :class => 'input1' %></li>
+
+      <li><%= form.label :beer_note, :class => 'input_label' %></li>
+      <li><%= form.text_area :beer_note, :class => 'input1' %></li>
+
+      <li>
+        <%= form.label(:beer_flavour_val, "One") %>
+        <%= form.radio_button(:beer_flavour_val, 1) %>
+        <%= form.label(:beer_flavour_val, "Two") %>
+        <%= form.radio_button(:beer_flavour_val, 2) %>
+        <%= form.label(:beer_flavour_val, "Three") %>
+        <%= form.radio_button(:beer_flavour_val, 3) %>
+        <%= form.label(:beer_flavour_val, "Four") %>
+        <%= form.radio_button(:beer_flavour_val, 4) %>
+        <%= form.label(:beer_flavour_val, "Five") %>
+        <%= form.radio_button(:beer_flavour_val, 5) %>
+      </li>
+
+      <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
+
+    <% end %>
+  </div>
+<container class='siz30l'>
+  <div>
+    <% @beers.each do |beer| %>
+      <div class="list-group-item">
+        <ul class="ul_list">
+          <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</container>
