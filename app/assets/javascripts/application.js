@@ -23,6 +23,12 @@ $(document).ready(function() {
     $('.new-food').toggleClass('hidden active');
   })
 
+    // views food_styles index.html.erb
+  $('.food-style-entry-form').on('click', function(){
+    console.log('clicked new food style')
+    $('.new-food-style').toggleClass('hidden active');
+  })
+
   // views beers index.html.erb
   $('.beer-entry-form').on('click', function(){
     console.log('clicked new beer')
