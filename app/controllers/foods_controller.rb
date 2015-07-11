@@ -1,10 +1,10 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.all
-    respond_to do |format|
-      format.html
-      format.json
-      @food = Food.new
+    binding.pry
+    if params[:search]
+      @foods = Food.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    else
+      @foods = Food.all
     end
   end
 

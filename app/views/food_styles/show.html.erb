@@ -6,3 +6,20 @@
     <p>Flavour Val: <%= @food_style.food_flavour_val %></p>
   </div>
 </container>
+<container class='siz60r'>
+  <p>Reccomended beer styles shown below</p>
+  <div>
+    <% @food_style.beer_styles.each do |beer_style| %>
+      <div class="list-group-item">
+        <ul class="ul_list">
+          <li><%= link_to(beer_style.style, beer_style_path(beer_style.id), :class => 'link_line')%></li>
+          <% beer_style.style_matches.each do |style_match| %>
+            <% if style_match.food_style_id == @food_style.id %>
+              <p><%= style_match.match_note %></p>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</container>

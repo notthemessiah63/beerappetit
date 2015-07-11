@@ -1,0 +1,26 @@
+<h2 class='page_hdr'>Food match - new</h2>
+<container class='siz30l'>
+
+<% form_for matches_path do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag "search" %>
+  </p>
+<% end %>
+
+  <ul class="ul_list">
+    <%= form_for @match do |form| %>
+    
+    <li><%= form.label :food_id, :class => 'input_label' %></li>
+    <li><%=form.collection_select(:food_id, Food.all, :id, :name, {:prompt=>true}, {:class=>'input1'}) %></li>
+
+    <li><%= form.label :beer_id, :class => 'input_label' %></li>
+    <li><%=form.collection_select(:beer_id, Beer.all, :id, :name, {:prompt=>true}, {:class=>'input1'}) %></li>
+
+    <li><%= form.label :match_note, :class => 'input_label' %></li>
+    <li><%= form.text_area :match_note, :class => 'input1' %></li>
+
+    <li><%= form.submit 'Submit', :class => 'submit_it' %></li>
+  <% end %>
+  </ul>
+</container>

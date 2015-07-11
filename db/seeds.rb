@@ -1,7 +1,9 @@
 BeerStyle.delete_all
+FoodStyle.delete_all
 Food.delete_all
 Beer.delete_all
 Match.delete_all
+StyleMatch.delete_all
 
 bs1 = BeerStyle.create(style: 'American Amber', style_note: 'Primarily a catch all for any beer less than a Dark Ale in color, ranging from amber (duh) to deep red hues. This style of beer tends to focus on the malts, but hop character can range from low to high. Expect a balanced beer, with toasted malt characters and a light fruitiness in most examples. The range can run from a basic ale, to American brewers who brew faux-Oktoberfest style beers that are actually ales instead of lagers.',beer_flavour_val: 3)
 bs2 = BeerStyle.create(style: 'American Barley Wine', style_note: 'Despite its name, a Barleywine (or Barley Wine) is very much a beer, albeit a very strong and often intense beer! In fact, it is one of the strongest of the beer styles. Lively and fruity, sometimes sweet, sometimes bittersweet, but always alcoholic. A brew of this strength and complexity can be a challenge to the palate. Expect anything from an amber to dark brown colored beer, with aromas ranging from intense fruits to intense hops. Body is typically thick, alcohol will definitely be perceived, and flavors can range from dominant fruits to palate smacking, resiny hops.',beer_flavour_val:3)
@@ -117,6 +119,7 @@ b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note
 fs1 = FoodStyle.create(style:'British', style_note:'traditional British food including stews, pies, and hearty soups', food_flavour_val: 3)
 fs2 = FoodStyle.create(style:'Italian', style_note:'Italian food including pasta dishes, with a leaning toward vegetables and garlic', food_flavour_val: 4)
 fs3 = FoodStyle.create(style:'Indian', style_note:'Indian food including curried dishes, spicy with a leaning toward and garlic and chili', food_flavour_val: 5)
+fs3 = FoodStyle.create(style:'Chinese', style_note:'Chinese food including stir fry dishes, spicy with a leaning toward and garlic and ginger', food_flavour_val: 5)
 
 
 # create food objects
@@ -128,5 +131,13 @@ f4 = Food.create(name: 'Beef wellington', food_notes: 'This recipe is a nod to t
 # #Method 2
 # o2 = Order.create(order_reference: 'fj#4fsew', amount: 70, customer_id: c2.id)
 # o1.order_products.create(product_id: p3.id)
+
+# food to beer matches
 f1.matches.create(beer_id: b1.id, match_note: 'This spag bol went well with Adnams Broadside, both rather robust flavours')
 f1.matches.create(beer_id: b2.id, match_note: 'Spaghetti bolognaise, strangely goes nicely with a spot of Old peculiar')
+
+# food_style to beer_style matches
+
+fs3.style_matches.create(beer_style_id: bs55.id)
+fs3.style_matches.create(beer_style_id: bs48.id)
+

@@ -1,15 +1,14 @@
 class MatchesController < ApplicationController
   def index
     @matches = Match.all
-    respond_to do |format|
-      format.html
-      format.json
-      @match = Match.new
-    end
   end
 
   def show
     @match = Match.find(params[:id])
+  end
+
+  def new
+    @match=Match.new
   end
 
   def create
