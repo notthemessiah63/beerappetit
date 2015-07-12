@@ -118,8 +118,8 @@ b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note
 
 fs1 = FoodStyle.create(style:'British', style_note:'traditional British food including stews, pies, and hearty soups', food_flavour_val: 3)
 fs2 = FoodStyle.create(style:'Italian', style_note:'Italian food including pasta dishes, with a leaning toward vegetables and garlic', food_flavour_val: 4)
-fs3 = FoodStyle.create(style:'Indian', style_note:'Indian food including curried dishes, spicy with a leaning toward and garlic and chili', food_flavour_val: 5)
 fs3 = FoodStyle.create(style:'Chinese', style_note:'Chinese food including stir fry dishes, spicy with a leaning toward and garlic and ginger', food_flavour_val: 5)
+fs4 = FoodStyle.create(style:'Curried', style_note:'Indian food including curried dishes, spicy with a leaning toward and garlic and chili', food_flavour_val: 5)
 
 
 # create food objects
@@ -137,7 +137,18 @@ f1.matches.create(beer_id: b1.id, match_note: 'This spag bol went well with Adna
 f1.matches.create(beer_id: b2.id, match_note: 'Spaghetti bolognaise, strangely goes nicely with a spot of Old peculiar')
 
 # food_style to beer_style matches
-
+# Chinese
 fs3.style_matches.create(beer_style_id: bs55.id)
 fs3.style_matches.create(beer_style_id: bs48.id)
+
+# Curried
+fs4.style_matches.create(beer_style_id: bs8.id)
+fs4.style_matches.create(beer_style_id: bs37.id)
+fs4.style_matches.create(beer_style_id: bs19.id)
+fs4.style_matches.create(beer_style_id: bs5.id)
+fs4.style_matches.create(beer_style_id: bs22.id)
+
+# Italian
+fs2.style_matches.create(beer_style_id: bs4.id)
+fs2.style_matches.create(beer_style_id: bs49.id)
 

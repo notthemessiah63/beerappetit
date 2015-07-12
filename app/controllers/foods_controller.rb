@@ -1,6 +1,5 @@
 class FoodsController < ApplicationController
   def index
-    binding.pry
     if params[:search]
       @foods = Food.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
     else
