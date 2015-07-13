@@ -1,5 +1,14 @@
 <h2>Food Styles - Index</h2>
 
+<!-- ===== Search Field to restrict list -->
+  <%= form_for food_styles_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search %>
+      <%= submit_tag "search" %>
+    </p>
+  <% end %>
+
+<!-- ====== end of search field ======= -->
 
 <button class="food-style-entry-form">New Food Style</button>
   <div class="new-food-style hidden">

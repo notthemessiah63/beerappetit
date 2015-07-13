@@ -1,11 +1,14 @@
-<h1>Hello Beer and food</h1>
+<h2>foods - index</h2>
 
+<!-- ===== Search Field to restrict list -->
   <%= form_for foods_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search %>
       <%= submit_tag "search" %>
     </p>
   <% end %>
+
+<!-- ====== end of search field ======= -->
 
 <!-- =======New food Form =================== -->
 

@@ -1,11 +1,11 @@
 class BeerStylesController < ApplicationController
   def index
-    @beer_styles = BeerStyle.all
-    respond_to do |format|
-      format.html
-      format.json
-      @beer_style = BeerStyle.new
+    if params[:search]
+      @beer_styles = BeerStyle.where('LOWER(style) LIKE?', "%#{params[:search].downcase}%")
+    else
+      @beer_styles = BeerStyle.all
     end
+    @beer_style = BeerStyle.new
   end
 
   def show

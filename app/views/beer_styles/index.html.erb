@@ -1,4 +1,15 @@
 <h2 class='page_hdr'>Beer Styles</h2>
+
+<!-- ===== Search Field to restrict list -->
+  <%= form_for beer_styles_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search %>
+      <%= submit_tag "search" %>
+    </p>
+  <% end %>
+
+<!-- ====== end of search field ======= -->
+
 <button class="beer-style-entry-form">New Beer Style</button>
   <div class="new-beer-style hidden">
     <%= form_for @beer_style do |form| %>

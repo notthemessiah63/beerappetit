@@ -1,11 +1,11 @@
 class FoodStylesController < ApplicationController
   def index
-    @food_styles = FoodStyle.all
-    respond_to do |format|
-      format.html
-      format.json
-      @food_style = FoodStyle.new
+    if params[:search]
+      @food_styles = FoodStyle.where('LOWER(style) LIKE?', "%#{params[:search].downcase}%")
+    else
+      @food_styles = FoodStyle.all
     end
+    @food_style = FoodStyle.new
   end
 
   def show

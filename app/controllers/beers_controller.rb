@@ -1,11 +1,17 @@
 class BeersController < ApplicationController
   def index
-    @beers = Beer.all
-    respond_to do |format|
-      format.html
-      format.json
-      @beer = Beer.new
+    # @beers = Beer.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json
+    #   @beer = Beer.new
+    # end
+    if params[:search]
+      @beers = Beer.where('LOWER(name) LIKE?', "%#{params[:search].downcase}%")
+    else
+      @beers = Beer.all
     end
+    @beer = Beer.new
   end
 
   def create
