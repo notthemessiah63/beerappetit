@@ -1,13 +1,6 @@
 <h2 class='page_hdr'>Food match - new</h2>
 <container class='siz30l'>
 
-<% form_for matches_path do %>
-  <p>
-    <%= text_field_tag :search %>
-    <%= submit_tag "search" %>
-  </p>
-<% end %>
-
   <ul class="ul_list">
     <%= form_for @match do |form| %>
     
@@ -19,6 +12,23 @@
 
     <li><%= form.label :match_note, :class => 'input_label' %></li>
     <li><%= form.text_area :match_note, :class => 'input1' %></li>
+
+    <!-- ================= -->
+    <li>
+      <%= form.label(:review_val, "One") %>
+      <%= form.radio_button(:review_val, 1) %>
+      <%= form.label(:review_val, "Two") %>
+      <%= form.radio_button(:review_val, 2) %>
+      <%= form.label(:review_val, "Three") %>
+      <%= form.radio_button(:review_val, 3) %>
+      <%= form.label(:review_val, "Four") %>
+      <%= form.radio_button(:review_val, 4) %>
+      <%= form.label(:review_val, "Five") %>
+      <%= form.radio_button(:review_val, 5) %>
+    </li>
+    <!-- ================= -->
+    <li><%= form.label :review_by, :class => 'input_label' %></li>
+    <li><%= form.text_field :review_by, :class => 'input1' %></li>
 
     <li><%= form.submit 'Submit', :class => 'submit_it' %></li>
   <% end %>

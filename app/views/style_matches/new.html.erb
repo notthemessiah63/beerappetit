@@ -1,0 +1,16 @@
+<h2>Style Matches - new</h2>
+  <ul class="ul_list">
+    <%= form_for @style_match do |form| %>
+    
+    <li><%= form.label :food_style_id, :class => 'input_label' %></li>
+    <li><%=form.collection_select(:food_style_id, FoodStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
+
+    <li><%= form.label :beer_style_id, :class => 'input_label' %></li>
+    <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
+
+    <li><%= form.label :match_note, :class => 'input_label' %></li>
+    <li><%= form.text_area :match_note, :class => 'input1' %></li>
+
+    <li><%= form.submit 'Submit', :class => 'submit_it' %></li>
+  <% end %>
+  </ul>

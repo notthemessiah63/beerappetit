@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :foods
   resources :beers
   resources :matches
+  resources :style_matches
   resources :beer_styles
   resources :food_styles
   # You can have the root of your site routed with "root"

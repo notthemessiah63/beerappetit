@@ -12,6 +12,10 @@ class StyleMatchesController < ApplicationController
     @style_match = StyleMatch.find(params[:id])
   end
 
+  def new
+    @style_match=StyleMatch.new
+  end
+
   def create
     match = StyleMatch.create params[:style_match].permit(:match_note, :beer_style_id, :food_style_id)
     if match.save

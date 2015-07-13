@@ -34,4 +34,10 @@ $(document).ready(function() {
     console.log('clicked new beer')
     $('.new-beer').toggleClass('hidden active');
   })
+
+  // views beer_styles index.html.erb
+  $('.beer-style-entry-form').on('click', function(){
+    console.log('clicked new beer')
+    $('.new-beer-style').toggleClass('hidden active');
+  })
 })
