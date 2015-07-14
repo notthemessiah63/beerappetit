@@ -1,20 +1,257 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ * listed below.*/
 
-/* used when toggle class of 'hidden' initially for forms*/
+ html { 
+  /*background: url(back-ground-1.jpg) no-repeat center center fixed; */
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  background-color: #036;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header {
+  background-image: url("header_image.png");
+  background-color: #036;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e7f3;*/
+  height:300px;
+
+}
+
+body {
+  /*background-color: #d8e7f3;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* the 'main-container essentially encompasses the body between the header and footer*/
+.main-container {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #f6fafe;
+  background-color: #036;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+/*Page titles*/
+.page_hdr {
+  color: white;
+}
+
+/*  Century Gothic*/
+
+h1 {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.3999996185303px;
+}
+h2 {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.3999996185303px;
+}
+h3 {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 15.3999996185303px;
+}
+
+/*======== nav bar container for app pages ====================*/
+
+#navcontainer ul
+{
+vertical-align: bottom;
+padding-left: 0;
+margin-left: 0;
+background-color: #036;
+color: White;
+float: left;
+width: 100%;
+font-family: arial, helvetica, sans-serif;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+padding: 0.2em 1em;
+background-color: #036;
+color: White;
+text-decoration: none;
+float: left;
+border-right: 1px solid #fff;
+}
+
+#navcontainer ul li a:hover
+{
+background-color: #369;
+color: #fff;
+}
+
+/*=========== end of nav bar container ===========*/
+
+/*==== to fix nav just below  header (Sticky Nav)============*/
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+/*    left: 0;*/
+    top: 0;
+    width: 100%;
+    padding:0;
+    margin:0; 
+}
+/*====== end of fix nav ========================*/
+.navlist {
+  background-color: #036;
+  padding:0;
+  margin:0; 
+}
+.navmenu {
+  background-color: #036;
+  padding:0;
+  margin:0; 
+}
+
+
+/*=========== start of lists, eg Foods, Beers, Styles etc*/
+
+.ul_list {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+.link_line {
+  display:block;
+  background:#d9d9d9;
+  width:300px;
+  text-decoration:none;
+  padding:4px/*padding for top, bottom*/ 7px /*padding for left, right*/;
+  border-bottom:1px solid #eeeeee;
+  border-top:1px solid #cccccc;
+  border-left:5px solid #333333;
+  color:#d0a962;
+/*  background-color: rgba(50,60,70,0.7);*/
+}
+
+.link_line:hover {
+  border-left-color:#f3e2c4;
+  color:#523a14;
+  // background:#c4c4c4;
+  background:#d0a962;
+}
+
+/*============end of lists ==============================*/
+
+/*===== Containers Names indicate percentage Width ======*/
+
+
+.siz20l {
+  width:20%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+  margin-right: -4px;
+}
+
+.siz30l {
+  width:30%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+
+}
+.siz30r {
+  width:30%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+}
+.siz40l {
+  width:40%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+
+}
+.siz40r {
+  width:40%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+}
+.siz60l {
+  width:60%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+}
+.siz60r {
+  width:60%;
+  padding:2%;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #f6fafe;
+}
+
+
+/*============ end of containers ========================*/
+
+
+
+
+/* used when toggle between 'hidden' or 'active' for forms*/
  .hidden {
   display: none;
  }

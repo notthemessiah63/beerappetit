@@ -1,4 +1,6 @@
-<h2>foods - index</h2>
+<container class ='main-container'>
+
+  <h2>foods - index</h2>
 
 <!-- ===== Search Field to restrict list -->
   <%= form_for foods_path, :method => 'get' do %>
@@ -12,7 +14,7 @@
 
 <!-- =======New food Form =================== -->
 
-<button class="food-entry-form">New Food</button>
+  <button class="food-entry-form" rel='external'>New Food</button>
   <div class="new-food hidden">
     <%= form_for @food do |form| %>
       
@@ -57,8 +59,4 @@
   </div>
 
 <!-- ====== end of 'list all foods' ========== -->
-
-
-
-
-  
+</container>

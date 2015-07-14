@@ -17,6 +17,17 @@
 
 $(document).ready(function() {
   console.log("document ready")
+  // ==== Sticky navbar ======
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#navlist').addClass("f-nav");
+        } else {
+          $('#navlist').removeClass("f-nav");
+        }
+    });
+  // ==== end of sticky navbar =====
+
+
   // views foods index.html.erb
   $('.food-entry-form').on('click', function(){
     console.log('clicked new food')

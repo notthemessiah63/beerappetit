@@ -10,7 +10,7 @@
 
 <!-- ====== end of search field ======= -->
 
-  <button class="beer-entry-form">New Beer</button>
+  <button class="beer-entry-form" rel='external'>New Beer</button>
   <div class="new-beer hidden">
     <%= form_for @beer do |form| %>
       
@@ -22,6 +22,9 @@
 
       <li><%= form.label :beer_note, :class => 'input_label' %></li>
       <li><%= form.text_area :beer_note, :class => 'input1' %></li>
+
+      <li><%= form.label :beer_style_id, :class => 'input_label' %></li>
+      <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
 
       <li><%= form.label :image, :class => 'input_label' %></li>
       <li><%= form.text_field :image, :class => 'input1' %></li>
