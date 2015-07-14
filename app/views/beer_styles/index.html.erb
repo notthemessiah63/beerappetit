@@ -1,4 +1,5 @@
-<h2 class='page_hdr'>Beer Styles</h2>
+<container class='siz30l'>
+  <h2 class='page_hdr'>Beer Styles</h2>
 
 <!-- ===== Search Field to restrict list -->
   <%= form_for beer_styles_path, :method => 'get' do %>
@@ -37,6 +38,7 @@
 
     <% end %>
   </div>
+</container>
 <container class='siz30l'>
   <div>
     <% @beer_styles.each do |beer_style| %>

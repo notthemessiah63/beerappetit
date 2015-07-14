@@ -1,62 +1,65 @@
-<container class ='main-container'>
 
-  <h2 class='page_hdr'>foods - index</h2>
+  <container class='siz30l'>
+    <h2>foods</h2>
 
-<!-- ===== Search Field to restrict list -->
-  <%= form_for foods_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search %>
-      <%= submit_tag "search" %>
-    </p>
-  <% end %>
-
-<!-- ====== end of search field ======= -->
-
-<!-- =======New food Form =================== -->
-
-  <button class="food-entry-form" rel='external'>New Food</button>
-  <div class="new-food hidden">
-    <%= form_for @food do |form| %>
-      
-      <li><%= form.label :name, :class => 'input_label' %></li>
-      <li><%= form.text_field :name, :class => 'input1' %></li>
-
-      <li><%= form.label :food_notes, :class => 'input_label' %></li>
-      <li><%= form.text_area :food_notes, :class => 'input1' %></li>
-
-      <li><%= form.label :food_style_id, :class => 'input_label' %></li>
-      <li><%=form.collection_select(:food_style_id, FoodStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
-
-      <li>
-        <%= form.label(:food_flavour_val, "One") %>
-        <%= form.radio_button(:food_flavour_val, 1) %>
-        <%= form.label(:food_flavour_val, "Two") %>
-        <%= form.radio_button(:food_flavour_val, 2) %>
-        <%= form.label(:food_flavour_val, "Three") %>
-        <%= form.radio_button(:food_flavour_val, 3) %>
-        <%= form.label(:food_flavour_val, "Four") %>
-        <%= form.radio_button(:food_flavour_val, 4) %>
-        <%= form.label(:food_flavour_val, "Five") %>
-        <%= form.radio_button(:food_flavour_val, 5) %>
-      </li>
-
-      <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
-
+  <!-- ===== Search Field to restrict list -->
+    <%= form_for foods_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search %>
+        <%= submit_tag "search" %>
+      </p>
     <% end %>
-  </div>
 
-<!-- ============  end of 'New food' form ============== -->
+  <!-- ====== end of search field ======= -->
 
-<!-- ======= list all foods  =========================== -->
-  <div>
-    <% @foods.each do |food| %>
-      <div class="food_list_div">
-        <ul class="ul_list">
-          <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
-        </ul>
-      </div>
-    <% end %>
-  </div>
+  <!-- =======New food Form =================== -->
+
+    <button class="food-entry-form" rel='external'>New Food</button>
+    <div class="new-food hidden">
+      <%= form_for @food do |form| %>
+        
+        <li><%= form.label :name, :class => 'input_label' %></li>
+        <li><%= form.text_field :name, :class => 'input1' %></li>
+
+        <li><%= form.label :food_notes, :class => 'input_label' %></li>
+        <li><%= form.text_area :food_notes, :class => 'input1' %></li>
+
+        <li><%= form.label :food_style_id, :class => 'input_label' %></li>
+        <li><%=form.collection_select(:food_style_id, FoodStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
+
+        <li>
+          <%= form.label(:food_flavour_val, "One") %>
+          <%= form.radio_button(:food_flavour_val, 1) %>
+          <%= form.label(:food_flavour_val, "Two") %>
+          <%= form.radio_button(:food_flavour_val, 2) %>
+          <%= form.label(:food_flavour_val, "Three") %>
+          <%= form.radio_button(:food_flavour_val, 3) %>
+          <%= form.label(:food_flavour_val, "Four") %>
+          <%= form.radio_button(:food_flavour_val, 4) %>
+          <%= form.label(:food_flavour_val, "Five") %>
+          <%= form.radio_button(:food_flavour_val, 5) %>
+        </li>
+
+        <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
+
+      <% end %>
+    </div>
+  </container>
+
+  <!-- ============  end of 'New food' form ============== -->
+
+  <!-- ======= list all foods  =========================== -->
+  <container class='siz30l'>
+    <div>
+      <% @foods.each do |food| %>
+        <div class="food_list_div">
+          <ul class="ul_list">
+            <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </container>
 
 <!-- ====== end of 'list all foods' ========== -->
-</container>
+

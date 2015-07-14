@@ -181,7 +181,6 @@ color: #fff;
 
 /*===== Containers Names indicate percentage Width ======*/
 
-
 .siz20l {
   width:20%;
   padding:2%;
@@ -226,7 +225,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #f6fafe;
 
 }
@@ -238,7 +237,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #f6fafe;
 }
 .siz60l {
@@ -249,7 +248,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #f6fafe;
 }
 .siz60r {
@@ -260,8 +259,11 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #f6fafe;
+}
+.not-inline {
+  display: block;
 }
 
 /*============ end of containers ========================*/
@@ -271,3 +273,8 @@ color: #fff;
  .hidden {
   display: none;
  }
+
+.list-group-item{
+  border: 1px dotted grey;
+}
+  

@@ -10,7 +10,7 @@
 <container class='siz60r'>
   <p>Beer pairings shown below for your chosen meal..</p>
   <div>
-    <% @food.beers.each do |beer| %>
+    <% @food.beers.uniq.each do |beer| %>
       <div class="list-group-item">
         <ul class="ul_list">
           <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%>Avg:</li>
