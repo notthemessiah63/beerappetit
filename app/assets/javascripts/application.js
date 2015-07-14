@@ -17,7 +17,7 @@
 
 $(document).ready(function() {
   console.log("document ready")
-  // ==== Sticky navbar ======
+  // ========= Sticky navbar =================
   $(window).scroll(function () {
       if ($(this).scrollTop() > 300) {
         $('#navlist').addClass("f-nav");
@@ -25,16 +25,16 @@ $(document).ready(function() {
         $('#navlist').removeClass("f-nav");
       }
   });
-  // ==== end of sticky navbar =====
+  // ----------- end of sticky navbar --------
 
-  // === Show/remove Info on mouse over ======= 
+  // ====== Show/remove Info on ul on mouse over ====== 
   $('.list-group-item').on('mouseenter', function(){
     console.log('enter list-group-item')
   })
   $('.list-group-item').on('mouseleave', function(){
     console.log('leave list-group-item')
   })
-  // ===  end of show info on mouse over ==
+  // ------- end of show info on mouse over -----------
 
 
   // views 'foods' index.html.erb

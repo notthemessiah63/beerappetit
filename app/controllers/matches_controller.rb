@@ -5,6 +5,8 @@ class MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
+    @match_count = Match.count(:review_val)
+    @match_avg = Match.average(:review_val)
   end
 
   def new

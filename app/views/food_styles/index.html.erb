@@ -1,16 +1,16 @@
-<h2>Food Styles - Index</h2>
+<!-- <h2 class='page_hdr'>Food Styles - Index</h2> -->
 
 <!-- ===== Search Field to restrict list -->
+<container class='siz30l'>
+  <h2>Food Styles</h2>
   <%= form_for food_styles_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search %>
       <%= submit_tag "search" %>
     </p>
   <% end %>
-
 <!-- ====== end of search field ======= -->
-
-<button class="food-style-entry-form" rel='external'>New Food Style</button>
+  <button class="food-style-entry-form" rel='external'>New Food Style</button>
   <div class="new-food-style hidden">
     <%= form_for @food_style do |form| %>
       
@@ -37,6 +37,7 @@
 
     <% end %>
   </div>
+</container>
 
 
 <container class='siz30l'>

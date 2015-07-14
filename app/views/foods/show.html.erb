@@ -13,10 +13,11 @@
     <% @food.beers.each do |beer| %>
       <div class="list-group-item">
         <ul class="ul_list">
-          <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%></li>
+          <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%>Avg:</li>
           <% beer.matches.each do |match| %>
             <% if match.food_id == @food.id %>
               <p><%= match.match_note %></p>
+              <p>Rating <%= match.review_val %></p>
             <% end %>
           <% end %>
         </ul>

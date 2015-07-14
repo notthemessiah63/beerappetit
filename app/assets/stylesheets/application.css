@@ -22,7 +22,6 @@ header {
   border-style: solid;
   border-color: #d8e7f3;*/
   height:300px;
-
 }
 
 body {
@@ -31,6 +30,19 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+footer {
+  background-image: url("beer_footer.png");
+  background-color: #036;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e7f3;*/
+  height:300px;
 }
 
 /* the 'main-container essentially encompasses the body between the header and footer*/
@@ -147,22 +159,22 @@ color: #fff;
 }
 .link_line {
   display:block;
-  background:#d9d9d9;
+  background:#f6fafe;
   width:300px;
   text-decoration:none;
   padding:4px/*padding for top, bottom*/ 7px /*padding for left, right*/;
   border-bottom:1px solid #eeeeee;
   border-top:1px solid #cccccc;
-  border-left:5px solid #333333;
-  color:#d0a962;
+  border-left:5px solid #c1c4cd;
+  color:black;
 /*  background-color: rgba(50,60,70,0.7);*/
 }
 
 .link_line:hover {
-  border-left-color:#f3e2c4;
+  border-left-color:#4a4f5e;
   color:#523a14;
   // background:#c4c4c4;
-  background:#d0a962;
+  background:#f2e497;
 }
 
 /*============end of lists ==============================*/
@@ -178,6 +190,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 4px;
   background-color: #f6fafe;
   margin-right: -4px;
 }
@@ -190,6 +203,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 4px;
   background-color: #f6fafe;
 
 }
@@ -201,6 +215,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 2px;
   background-color: #f6fafe;
 }
 .siz40l {
@@ -211,6 +226,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 2px;
   background-color: #f6fafe;
 
 }
@@ -222,6 +238,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 2px;
   background-color: #f6fafe;
 }
 .siz60l {
@@ -232,6 +249,7 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 2px;
   background-color: #f6fafe;
 }
 .siz60r {
@@ -242,13 +260,11 @@ color: #fff;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  border-radius: 2px;
   background-color: #f6fafe;
 }
 
-
 /*============ end of containers ========================*/
-
-
 
 
 /* used when toggle between 'hidden' or 'active' for forms*/
