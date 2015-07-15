@@ -9,7 +9,7 @@
 <container class='siz40r'>
   <p>Reccomended food styles shown below</p>
   <div>
-    <% @beer_style.food_styles.each do |food_style| %>
+    <% @beer_style.food_styles.order(:style).each do |food_style| %>
       <div class="list-group-item">
         <ul class="ul_list">
           <li><%= link_to(food_style.style, food_style_path(food_style.id), :class => 'link_line')%></li>

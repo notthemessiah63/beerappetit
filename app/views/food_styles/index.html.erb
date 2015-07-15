@@ -12,37 +12,48 @@
 <!-- ====== end of search field ======= -->
   <button class="food-style-entry-form" rel='external'>New Food Style</button>
   <div class="new-food-style hidden">
-    <%= form_for @food_style do |form| %>
-      
-      <li><%= form.label :style, :class => 'input_label' %></li>
-      <li><%= form.text_field :style, :class => 'input1' %></li>
+    <ul class="ul_list">
+      <%= form_for @food_style do |form| %>
+        
+        <li><%= form.label :style, :class => 'input_label' %></li>
+        <li><%= form.text_field :style, :class => 'input1' %></li>
 
-      <li><%= form.label :style_note, :class => 'input_label' %></li>
-      <li><%= form.text_area :style_note, :class => 'input1' %></li>
+        <li><%= form.label :style_note, :class => 'input_label' %></li>
+        <li><%= form.text_area :style_note, :class => 'input1' %></li>
 
-      <li>
-        <%= form.label(:food_flavour_val, "One") %>
-        <%= form.radio_button(:food_flavour_val, 1) %>
-        <%= form.label(:food_flavour_val, "Two") %>
-        <%= form.radio_button(:food_flavour_val, 2) %>
-        <%= form.label(:food_flavour_val, "Three") %>
-        <%= form.radio_button(:food_flavour_val, 3) %>
-        <%= form.label(:food_flavour_val, "Four") %>
-        <%= form.radio_button(:food_flavour_val, 4) %>
-        <%= form.label(:food_flavour_val, "Five") %>
-        <%= form.radio_button(:food_flavour_val, 5) %>
-      </li>
+        <li>
+          <%= form.label(:food_flavour_val, "1 ") %>
+          <%= form.radio_button(:food_flavour_val, 1) %>
+          <%= form.label(:food_flavour_val, " Delicate") %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "2 ") %>
+          <%= form.radio_button(:food_flavour_val, 2) %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "3 ") %>
+          <%= form.radio_button(:food_flavour_val, 3) %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "4 ") %>
+          <%= form.radio_button(:food_flavour_val, 4) %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "5 ") %>
+          <%= form.radio_button(:food_flavour_val, 5) %><%= form.label(:food_flavour_val, " Strong") %>
+        </li>
 
-      <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
+        <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
 
-    <% end %>
+      <% end %>
+    </ul>
   </div>
 </container>
 
 
 <container class='siz30l'>
   <div>
-    <% @food_styles.each do |food_style| %>
+    <% @food_styles.order(:style).each do |food_style| %>
       <div class="list-group-item">
         <ul class="ul_list">
           <li><%= link_to(food_style.style, food_style_path(food_style.id), :class => 'link_line')%></li>

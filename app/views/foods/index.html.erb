@@ -1,6 +1,6 @@
 
   <container class='siz30l'>
-    <h4>foods</h4>
+    <h2>foods</h2>
 
   <!-- ===== Search Field to restrict list -->
     <%= form_for foods_path, :method => 'get' do %>
@@ -26,18 +26,27 @@
 
         <li><%= form.label :food_style_id, :class => 'input_label' %></li>
         <li><%=form.collection_select(:food_style_id, FoodStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
-
+        <li>Select Flavour strength</li>
         <li>
-          <%= form.label(:food_flavour_val, "One") %>
+          <%= form.label(:food_flavour_val, "1 ") %>
           <%= form.radio_button(:food_flavour_val, 1) %>
-          <%= form.label(:food_flavour_val, "Two") %>
+          <%= form.label(:food_flavour_val, " Delicate") %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "2 ") %>
           <%= form.radio_button(:food_flavour_val, 2) %>
-          <%= form.label(:food_flavour_val, "Three") %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "3 ") %>
           <%= form.radio_button(:food_flavour_val, 3) %>
-          <%= form.label(:food_flavour_val, "Four") %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "4 ") %>
           <%= form.radio_button(:food_flavour_val, 4) %>
-          <%= form.label(:food_flavour_val, "Five") %>
-          <%= form.radio_button(:food_flavour_val, 5) %>
+        </li>
+        <li>
+          <%= form.label(:food_flavour_val, "5 ") %>
+          <%= form.radio_button(:food_flavour_val, 5) %><%= form.label(:food_flavour_val, " Strong") %>
         </li>
 
         <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>

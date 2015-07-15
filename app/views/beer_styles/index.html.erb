@@ -41,7 +41,7 @@
 </container>
 <container class='siz30l'>
   <div>
-    <% @beer_styles.each do |beer_style| %>
+    <% @beer_styles.order(:style).each do |beer_style| %>
       <div class="list-group-item">
         <ul class="ul_list">
           <li><%= link_to(beer_style.style, beer_style_path(beer_style.id), :class => 'link_line')%></li>

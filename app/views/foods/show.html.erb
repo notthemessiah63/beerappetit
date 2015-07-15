@@ -9,6 +9,7 @@
 </container>
 <container class='siz60r'>
   <p>Beer pairings shown below for your chosen meal..</p>
+  <input type="checkbox" name="flavour_match" value="yes">Match flavour value?<br>
   <div>
     <% @food.beers.order(:name).uniq.each do |beer| %>
       <div class="list-group-item">
