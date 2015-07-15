@@ -1,6 +1,13 @@
 class MatchesController < ApplicationController
+  # def index
+  #   @matches = Match.all
+  # end
   def index
-    @matches = Match.all
+    @tasks = Match.all
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def show
@@ -15,11 +22,26 @@ class MatchesController < ApplicationController
 
   def create
     match = Match.create params[:match].permit(:match_note, :beer_id, :review_by, :review_date, :review_val, :food_id)
+    # commented out when moving to ajax
+    # if match.save
+    #   redirect_to foods_path
+    # else
+    #   render 'new'
+    # end
+    # end of commented out for ajax
     if match.save
-      redirect_to foods_path
+      respond_to do |format|
+        format.html {redirect_
+          to foods_path}
+        format.js 
+      end
     else
       render 'new'
     end
+
+
+
+
   end
 
   private

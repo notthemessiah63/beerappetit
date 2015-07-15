@@ -74,7 +74,7 @@ h1 {
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 26.3999996185303px;
+  line-height: 34.3999996185303px;
 }
 h2 {
   font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
@@ -90,7 +90,15 @@ h3 {
   font-style: normal;
   font-variant: normal;
   font-weight: 600;
-  line-height: 15.3999996185303px;
+  line-height: 20.3999996185303px;
+}
+
+.review {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
 }
 
 /*======== nav bar container for app pages ====================*/
@@ -132,7 +140,7 @@ color: #fff;
     z-index: 9999;
     position: fixed;
 /*    left: 0;*/
-    top: 0;
+    top: 0px;
     width: 100%;
     padding:0;
     margin:0; 
@@ -141,8 +149,9 @@ color: #fff;
 .navlist {
   background-color: #036;
   padding:0;
-  margin:0; 
+  margin:0;
 }
+
 .navmenu {
   background-color: #036;
   padding:0;
@@ -160,7 +169,7 @@ color: #fff;
 .link_line {
   display:block;
   background:#f6fafe;
-  width:300px;
+  width:320px;
   text-decoration:none;
   padding:4px/*padding for top, bottom*/ 7px /*padding for left, right*/;
   border-bottom:1px solid #eeeeee;
@@ -191,7 +200,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
-  margin-right: -4px;
+/*  margin-right: -4px;*/
 }
 
 .siz30l {

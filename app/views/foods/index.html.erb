@@ -1,6 +1,6 @@
 
   <container class='siz30l'>
-    <h2>foods</h2>
+    <h4>foods</h4>
 
   <!-- ===== Search Field to restrict list -->
     <%= form_for foods_path, :method => 'get' do %>
@@ -16,8 +16,8 @@
 
     <button class="food-entry-form" rel='external'>New Food</button>
     <div class="new-food hidden">
-      <%= form_for @food do |form| %>
-        
+      <ul class="ul_list">
+      <%= form_for @food do |form| %>     
         <li><%= form.label :name, :class => 'input_label' %></li>
         <li><%= form.text_field :name, :class => 'input1' %></li>
 
@@ -43,6 +43,7 @@
         <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
 
       <% end %>
+      </ul>
     </div>
   </container>
 
@@ -51,7 +52,7 @@
   <!-- ======= list all foods  =========================== -->
   <container class='siz30l'>
     <div>
-      <% @foods.each do |food| %>
+      <% @foods.order(:name).each do |food| %>
         <div class="food_list_div">
           <ul class="ul_list">
             <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>

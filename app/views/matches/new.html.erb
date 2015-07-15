@@ -14,18 +14,20 @@
     <li><%= form.text_area :match_note, :class => 'input1' %></li>
 
     <!-- ================= -->
-    <li>
-      <%= form.label(:review_val, "One") %>
-      <%= form.radio_button(:review_val, 1) %>
-      <%= form.label(:review_val, "Two") %>
-      <%= form.radio_button(:review_val, 2) %>
-      <%= form.label(:review_val, "Three") %>
-      <%= form.radio_button(:review_val, 3) %>
-      <%= form.label(:review_val, "Four") %>
-      <%= form.radio_button(:review_val, 4) %>
-      <%= form.label(:review_val, "Five") %>
-      <%= form.radio_button(:review_val, 5) %>
+    <li><%= form.label(:review_val, "1 ") %><%= form.radio_button(:review_val, 1) %><%= form.label(:review_val, "  Not Good") %></li>
+    <li><%= form.label(:review_val, "2 ") %>
+        <%= form.radio_button(:review_val, 2) %>
     </li>
+    <li><%= form.label(:review_val, "3 ") %>
+        <%= form.radio_button(:review_val, 3) %>
+        <%= form.label(:review_val, "  okay") %>
+    </li>
+    <li><%= form.label(:review_val, "4 ") %>
+        <%= form.radio_button(:review_val, 4) %>
+    </li>
+    <li><%= form.label(:review_val, "5") %>
+        <%= form.radio_button(:review_val, 5) %><%= form.label(:review_val, "  Good") %>
+    </li>   
     <!-- ================= -->
     <li><%= form.label :review_by, :class => 'input_label' %></li>
     <li><%= form.text_field :review_by, :class => 'input1' %></li>
