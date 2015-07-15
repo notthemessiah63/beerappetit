@@ -3,11 +3,7 @@ class MatchesController < ApplicationController
   #   @matches = Match.all
   # end
   def index
-    @tasks = Match.all
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    @match = Match.all
   end
 
   def show

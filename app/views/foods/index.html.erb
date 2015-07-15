@@ -15,7 +15,7 @@
   <!-- =======New food Form =================== -->
 
     <button class="food-entry-form" rel='external'>New Food</button>
-    <div class="new-food hidden">
+    <div class="new-food ">
       <ul class="ul_list">
       <%= form_for @food do |form| %>     
         <li><%= form.label :name, :class => 'input_label' %></li>
@@ -60,16 +60,111 @@
 
   <!-- ======= list all foods  =========================== -->
   <container class='siz30l'>
-    <div>
+    <div class="food_list_div">
+      <ul class="ul_list">
       <% @foods.order(:name).each do |food| %>
-        <div class="food_list_div">
-          <ul class="ul_list">
-            <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
-          </ul>
-        </div>
+        <li><%= link_to(food.name, food_path(food.id), :class => 'link_line' )%></li>
       <% end %>
+      </ul>
     </div>
   </container>
+  <container class='siz40r'>
+      <div>
+        <h3 class='info_hdr'>Food Pairing Tips</h3>
+        <p>
+          The more hop bitterness the beer has, the heartier or livelier the meal needs to be to hold its own. Don't overwhelm your palate or meal and ruin what the chef was trying to achieve.
+        </p>
+        <p>
+          Another general rule is keep sweet with sweet, and tart with tart. Try to keep your beer sweeter or tarter than the sweet or tart food on the plate. There are exceptions, like pairing drier robust beers with sweet chocolates.
+        </p>
+        <h3 class='info_hdr'>Throw out the rule book</h3>
+        <p><img class='info_img'src="images/rule_book.png">
+          Everyone seems to have a chart and a mould of pairing things together as if to over-simplify and discount our intelligence. I almost find this insulting. How many different brands of craft American style pale ale's have you had? Off the top of my head I can remember at least twenty-five. Each one very different from the other. Some are more dark with a caramel flavour, some are more hop-forward, and some are more malt-centric.  In the end,  it's all up to the brewers interpretations of the "suggested" style guidelines, right or wrong.  With twenty-five different some-what memorable pale ale's I could probably make 25 different dishes that work with those twenty-five different beers.
+        </p>
+        <p>
+          What I'm getting at here is you cannot throw a recognised style of beer and casually categorise it with general cuisine. Each brewer brings something unique to the palate when they create their beer just as with each pairing you create it will also be unique to the palate.  Throw the Beer Pairing Chart out and be creative.  In exploring pairings you'll be amazed at what you can create, and you'll develop a sense of pride as you develop culinary skills and learn the complexities of flavour combinations.  Let's start over and  encourage others to do the same.
+        </p>
+        <h3 class='info_hdr'>Flavours</h3>
+        <p>
+          Look for flavour bridges, where the flavours of craft beer can bridge to the flavours in a food dish. This helps create harmonies, home runs and the complementing interactions we all enjoy.
+        </p>
+        <p>
+          Below you'll find examples of flavour groups. Look for commonalities within a group, as they will be helpful in pairing beer and food. Example: a porter with hints of vanilla and chocolate can complement a brown sugar caramel cake.
+        </p>
+        <p>
+          This list represents a tiny sampling of common flavour groups, offering a suggested pairing to help make the connections.
+        </p>
+        <p>
+          Group: Rosemary, juniper, pine, spruce
+          Pairing: American pale ale and rosemary-dusted creamed chicken
+        </p>
+        <p>
+          Group: Brown sugar, butter, caramel, maple syrup, vanilla, coconut, toffee
+          Pairing: English-style barley wine and blonde brownie with butterscotch sauce
+        </p>
+        <p>
+          Group: Mint, dill, basil, endive, coriander, fennel, parsley, lemongrass, bay leaves, oregano
+          Pairing: Belgian-style saison and white fish with lemon and dill
+        </p>
+        <p>
+          Group: Cinnamon, cumin, pepper, cardamom, ginger, clove
+          Pairing: Ginger porter with Moroccan clove and ginger beef shish kebabs
+        </p>
+        <p>
+          Group: Date, fig, raisin
+          Pairing: Belgian-style strong dark ale and bacon wrapped dates
+        </p>
+        <p>
+          Group: Pineapple, tangerine, clementine
+          Pairing: American-style India pale ale and orange chicken stir fry
+        </p>
+        <p>
+          Group: Chocolate, truffle, cocoa powder
+          Pairing: Milk stout and double chocolate cake
+        </p>
+        <h3 class='info_hdr'>Intensity</h3>
+        <p>
+          Remember! Match strength with strength. When pairing beer and food it's most important that the intensity of the beer matches that of the dish. You don't want the craft beer to outweigh the food and vice versa.
+        </p>
+        <h3 class='info_hdr'>Rules?</h3>
+        <p>
+          Throw all of the rules out the window and experiment with contrasting and complimentary pairings. Match foods with complimentary flavours, or try contrasting them and create a slew of unique results. 
+        </p>
+        <p>
+          For those of you who are bound to the wine pairing school of thought, think of ale as red wine and lager as white wine. Hoppy beers can also be used in place of a pairing that calls for an acidic wine. Though it honestly doesn't matter, these tips might help you to convert your taste buds over to beer or those of a friend over to beer. 
+        </p>
+        <p>
+          Taste is very subjective and what works for one person might not work for another. If it tastes good to you, then go for it. However, also be open to suggestions, as these tend to come with some knowledge and possible palate enlightenment.
+        </p>
+        <h3 class='info_hdr'>Beer and Cheese</h3><img class='info_img'src="images/bandc.jpg">
+        <p>
+          If someone ordered an Indian Pale Ale with their cheese, would that be so wrong? No. It's all about personal preference after all. Wine always has its place beside any aged, dairy delicacy—or other less moldy edibles—but a perfect lager or ale can stand up to any red or white vino when pairing food and drink.
+        </p>
+        <p>
+          "Beer is a great match for food because of the complexity of its flavours, its ability to provide refreshment and to interact with many food flavours," says Marc Stroobandt, master beer sommelier for the Food and Beer Consultancy, UK. "Even before the meal, beer already is doing its work for food pairing as the hops stimulate the appetite."
+        </p>
+        <p>
+          When pairing beer and food, it all comes down to matching the food's flavours to the flavours of the beers.
+        </p>
+        <p>
+          Wine and cheese is a universally-known pair, but what most people may not know is that beer is one of the best matches for cheese. "Wine may cover up some of the flavors in cheese while the carbonation in beer creates a lighter acidity and lifts the fats in the cheese off the palate," says The Beer Sommelier, Matt Simpson. "Whether it's a straight-up cheese platter, pizza, sandwich, goat cheese salad, almost any beer is a go when it comes to cheese.
+        </p>
+        <h3 class='info_hdr'>Beer and Sushi</h3>
+        <p><img class='info_img'src="images/Sushi.png">
+          What better way to wash down this tasty fare than with a bottle of Kirin Ichiban.
+        </p>
+        <p>
+          Recommended: All beer (Note: for stronger cheeses like goat and blue, grab a darker lager or ale.) Try Hennepin Saison (Belgium)
+        </p>
+        <h3 class='info_hdr'>Chicken, Seafood, Pasta</h3>
+        <p><img class='info_img'src="images/seafood.jpg">
+          The one rule with dishes like chicken, fish, salads or pastas are that you don't want to overpower them with a beer. Therefore, lighter is better. A light German lager or Belgian Saison with chicken or fish is perfect. (If creams or sauces are added you need a heavy, richer beer.) Pasta is slightly more versatile but still pairs well with similar brews like blonde ales and German or American wheat ales.
+        </p>
+        <p>
+          Recommended: Light German Lager, Marzen-style (more malt); Octoberfest brews; Belgian Blonde ale or lager. Try Samuel Adams Octoberfest (US), Stella Artois (Belgium), Leffe Blond (Belgium)
+        </p>
+      </div>
+    </container>
 
 <!-- ====== end of 'list all foods' ========== -->
 

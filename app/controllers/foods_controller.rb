@@ -18,11 +18,20 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.create params[:food].permit(:name, :food_notes, :food_style_id, :food_flavour_val)
-    if @food.save
-      redirect_to foods_path
-    else
-      render 'new'
+    respond_to do |format|
+      if @food.save
+        format.html 
+        format.json {render :json => @food}
+      else
+        #Add some error stuff later
+      end
     end
+
+    # if @food.save
+    #   redirect_to foods_path
+    # else
+    #   render 'new'
+    # end
   end
 
   private

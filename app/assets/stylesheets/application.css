@@ -216,7 +216,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
-/*  margin-right: -4px;*/
+  margin-right: -4px;
 }
 
 .siz30l {
@@ -229,6 +229,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
+  margin-right: -4px;
 
 }
 .siz30r {
@@ -241,6 +242,7 @@ color: #fff;
   border-color: black;
   border-radius: 2px;
   background-color: #f6fafe;
+  margin-right: -4px;
 }
 .siz40l {
   width:40%;
@@ -252,6 +254,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
+  margin-right: -4px;
 
 }
 .siz40r {
@@ -264,6 +267,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
+  margin-right: -4px;
 }
 .siz60l {
   width:60%;
@@ -275,6 +279,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
+  margin-right: -4px;
 }
 .siz60r {
   width:60%;
@@ -286,6 +291,7 @@ color: #fff;
   border-color: black;
   border-radius: 4px;
   background-color: #f6fafe;
+  margin-right: -4px;
 }
 .not-inline {
   display: block;
