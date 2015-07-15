@@ -13,3 +13,21 @@
     <p>Tasting notes: <%= @beer.beer_note %></p>
   </div>
 </container>
+
+<!-- I forgot to put this in  -->
+
+<container class='siz60r'>
+  <p>Food pairings shown below for your chosen beer..</p>
+  <input type="checkbox" name="flavour_match" value="yes">Match flavour value?<br>
+  <div>
+    <% @beer.foods.order(:name).uniq.each do |food| %>
+      <div class="list-group-item">
+        <ul class="ul_list">
+          <li><%= link_to(food.name, food_path(food.id), :class => 'link_line')%></li>
+          <%== food_matches_details(food)[1] %>
+          Average rating: <%= food_matches_details(food)[0] %> from <%= food_matches_details(food)[2] %> reviews
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</container>
