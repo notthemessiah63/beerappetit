@@ -3,21 +3,34 @@ $(document).ready(function() {
 
   // ========= Sticky navbar =================
   $(window).scroll(function () {
-      if ($(this).scrollTop() > 324) {
+      if ($(this).scrollTop() > 300) {
         $('#navlist').addClass("f-nav");
+        $('#navlist').removeClass("f-nav-o");
+
       } else {
+        $('#navlist').addClass("f-nav-o");
         $('#navlist').removeClass("f-nav");
+
+
       }
   });
   // ----------- end of sticky navbar --------
 
   // ====== Show/remove Info on ul on mouse over ====== 
-  $('.list-group-item').on('mouseenter', function(){
-    console.log('enter list-group-item')
-  })
-  $('.list-group-item').on('mouseleave', function(){
-    console.log('leave list-group-item')
-  })
+  // $('.link_line').on('mouseenter', function(){
+  //   console.log('enter link_line')
+  //   $('#popup').show();
+  // })
+  // $('.link_line').on('mouseleave', function(){
+  //   console.log('leave link_line')
+  //   $('#popup').hide();
+  // })
+
+    $('.link_line').hover(function() {
+      $('#popup').show();
+      }, function() {
+      $('#popup').hide();
+    });
   
 
 

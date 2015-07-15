@@ -6,7 +6,7 @@ module BeersHelper
       if match.beer_id == @beer.id 
         count.push(match.review_val) if match.review_val 
           html += "<p class='review'>Match note: #{match.match_note} </p>"
-          html += "<p class='review'>Review: #{match.review_val}<span> by #{match.review_by}</span></p>"
+          html += "<p class='review under'>Review: #{match.review_val}<span> by #{match.review_by}</span></p>"
       end 
     end
     # take array of review values and sum, divide by number of reviews to get average.
