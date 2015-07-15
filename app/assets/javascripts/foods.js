@@ -66,6 +66,7 @@ $(document).ready(function() {
     $('.new-food').toggleClass('hidden active');
   })
 
+
     // views 'food_styles' index.html.erb
   $('.food-style-entry-form').on('click', function(){
     console.log('clicked new food style')
