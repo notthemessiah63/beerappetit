@@ -352,22 +352,87 @@ color: #fff;
 /*  float: right;*/
 }
 
-/*   =========   this is sticky div testing only ============*/
+/*  ==  form stuff here ====*/
 
-#header {
-    width: 100%;
-    height: 121px;
-    background: url(http://libertyeaglearms.com/dev/admin/graphics/header-bg.png);
+.form-select-b {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 90%;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('select-icon.png') 96% / 15% no-repeat #eee;
 }
-#content {
-    margin: 10px auto;
-    width: 300px;
-    min-height: 600px;
+
+.form-select-f {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 90%;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('food-icon.svg') 96% / 15% no-repeat #eee;
 }
-#header_placeholder {
-    height:121px;
-    width:100%;
-    display:none;
+
+.input1 {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 90%;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input2 {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 90%;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 140px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.submit_it {
+    margin:7px;
+    background-color: #b1cc99;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+
+
+.submit_it:hover {
+    margin:7px;
+    border: none;
+    color: white;
+    background:green;
+    box-shadow: 0px 0px 1px #777;
 }
 
   

@@ -1,19 +1,18 @@
-<h2 class='page_hdr'>Food match - new</h2>
-<container class='siz60l'>
+<h2 class='page_hdr'>Food/Beer match and review</h2>
+<container class='siz20l'>
 
   <ul class="ul_list">
     <%= form_for @match do |form| %>
     
     <li><%= form.label :food_id, :class => 'input_label' %></li>
-    <li><%=form.collection_select(:food_id, Food.all, :id, :name, {:prompt=>true}, {:class=>'input1'}) %></li>
+    <li><%=form.collection_select(:food_id, Food.all, :id, :name, {:prompt=>true}, {:class=>'form-select-f'}) %></li>
 
     <li><%= form.label :beer_id, :class => 'input_label' %></li>
-    <li><%=form.collection_select(:beer_id, Beer.all, :id, :name, {:prompt=>true}, {:class=>'input1'}) %></li>
+    <li><%=form.collection_select(:beer_id, Beer.all, :id, :name, {:prompt=>true}, {:class=>'form-select-b'}) %></li>
 
     <li><%= form.label :match_note, :class => 'input_label' %></li>
-    <li><%= form.text_area :match_note, :class => 'input1' %></li>
+    <li><%= form.text_area :match_note, :class => 'input2' %></li>
 
-    <!-- ================= -->
     <li><%= form.label(:review_val, "1 ") %><%= form.radio_button(:review_val, 1) %><%= form.label(:review_val, "  Not Good") %></li>
     <li><%= form.label(:review_val, "2 ") %>
         <%= form.radio_button(:review_val, 2) %>
@@ -28,7 +27,7 @@
     <li><%= form.label(:review_val, "5") %>
         <%= form.radio_button(:review_val, 5) %><%= form.label(:review_val, "  Good") %>
     </li>   
-    <!-- ================= -->
+
     <li><%= form.label :review_by, :class => 'input_label' %></li>
     <li><%= form.text_field :review_by, :class => 'input1' %></li>
 

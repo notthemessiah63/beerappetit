@@ -23,10 +23,10 @@
         <li><%= form.text_field :brewer, :class => 'input1' %></li>
 
         <li><%= form.label :beer_note, :class => 'input_label' %></li>
-        <li><%= form.text_area :beer_note, :class => 'input1' %></li>
+        <li><%= form.text_area :beer_note, :class => 'input2' %></li>
 
         <li><%= form.label :beer_style_id, :class => 'input_label' %></li>
-        <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'}) %></li>
+        <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'form-select-b'}) %></li>
 
         <li><%= form.label :image, :class => 'input_label' %></li>
         <li><%= form.text_field :image, :class => 'input1' %></li>
@@ -75,7 +75,7 @@
   <div>
     <h3 class='info_hdr'>The food IN your beer!</h3>
     <h3 class='info_hdr'>WATER</h3>
-    <p>
+    <p><img class='info_img' src="/assets/water.png">
       Since beer consists of water for more than 90%, a high water quality is of paramount importance. Numerous ions in it influence the brewing process to a larger or smaller extent.
     </p>
     <h3 class='info_hdr'>MALT</h3>
