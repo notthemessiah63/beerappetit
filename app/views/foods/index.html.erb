@@ -13,9 +13,9 @@
   <!-- ====== end of search field ======= -->
 
   <!-- =======New food Form =================== -->
-    <button class="food-entry-form" rel='external'>Hide form</button>
+    <button class="food-entry-form" rel='external'>Add Your Meal</button>
     <div class="new-food ">
-      <ul class="ul_list">
+      <ul class="ul_list_frm">
       <%= form_for @food do |form| %>     
         <li><%= form.label :name, :class => 'input_label' %></li>
         <li><%= form.text_field :name, :class => 'input1' %></li>

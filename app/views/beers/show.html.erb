@@ -1,14 +1,15 @@
 
-<container class='img15'>
+<!-- <container class='img15'>
   <div>
     <p><%= image_tag @beer.image %></p>
   </div>
-</container>
-<container class='siz30l'>
+</container> -->
+<container class='siz20l'>
   <h2>Show Beers</h2>
   <div>
     <p>Brewery: <%= @beer.brewer %></p>
     <p>Name   : <%= @beer.name %></p>
+    <p><%= image_tag @beer.image , :class => "beer_img"%></p>
     <p>ABV    : <%= @beer.abv %></p>
     <p>Style  : <%= @beer.beer_style.style %></p>
     <p>Tasting notes: <%= @beer.beer_note %></p>
@@ -17,7 +18,7 @@
 
 <!-- I forgot to put this in  -->
 
-<container class='siz60r'>
+<container class='siz40r'>
   <p>Food pairings shown below for your chosen beer..</p>
   <input type="checkbox" name="flavour_match" value="yes">Match flavour value?<br>
   <div>

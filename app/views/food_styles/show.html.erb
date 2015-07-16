@@ -1,12 +1,12 @@
 <h2 class='page_hdr'>Food Styles - Show</h2>
-<container class='siz30l'>
+<container class='siz20l'>
   <div>
     <p>Cuisine/type: <%= @food_style.style %></p>
     <p>Cuisine Notes  : <%= @food_style.style_note %></p>
     <p>Flavour Val: <%= @food_style.food_flavour_val %></p>
   </div>
 </container>
-<container class='siz60r'>
+<container class='siz40r'>
   <p>Reccomended beer styles shown below</p>
   <div>
     <% @food_style.beer_styles.each do |beer_style| %>
