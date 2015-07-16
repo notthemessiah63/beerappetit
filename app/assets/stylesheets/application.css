@@ -111,6 +111,12 @@ h3 {
 
 /*======== nav bar container for app pages ====================*/
 
+#navcontainer-placeholder {
+    height:40px;
+    width:100%;
+    display:none;
+}
+
 #navcontainer ul
 {
 vertical-align: bottom;
@@ -344,6 +350,24 @@ color: #fff;
   border-width: 1px;
   border-color: #8aa7bc;
 /*  float: right;*/
+}
+
+/*   =========   this is sticky div testing only ============*/
+
+#header {
+    width: 100%;
+    height: 121px;
+    background: url(http://libertyeaglearms.com/dev/admin/graphics/header-bg.png);
+}
+#content {
+    margin: 10px auto;
+    width: 300px;
+    min-height: 600px;
+}
+#header_placeholder {
+    height:121px;
+    width:100%;
+    display:none;
 }
 
   

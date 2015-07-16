@@ -11,30 +11,10 @@ $(document).ready(function() {
         $('#navlist').addClass("f-nav-o");
         $('#navlist').removeClass("f-nav");
 
-
       }
+
   });
-  // ----------- end of sticky navbar --------
-
-  // ====== Show/remove Info on ul on mouse over ====== 
-  // $('.link_line').on('mouseenter', function(){
-  //   console.log('enter link_line')
-  //   $('#popup').show();
-  // })
-  // $('.link_line').on('mouseleave', function(){
-  //   console.log('leave link_line')
-  //   $('#popup').hide();
-  // })
-
-    $('.link_line').hover(function() {
-      $('#popup').show();
-      }, function() {
-      $('#popup').hide();
-    });
-  
-
-
-  // ------- end of show info on mouse over -----------
+  // ----------- end of sticky navbar -------------
 
 
   // views 'foods' index.html.erb

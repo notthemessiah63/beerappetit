@@ -5,23 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
- 
 </head>
 <body>
   <header>
   </header>
-  <div id='navcontainer'>
-    <ul id="navlist">
-      <li class='nav_menu'><a href="/">Home</a></li>
-      <li class='nav_menu'><a href="/food_styles">Food Styles</a></li>
-      <li class='nav_menu'><a href="/beer_styles">Beer Styles</a></li>
-      <li class='nav_menu'><a href="/beers">Beers</a></li>
-      <li class='nav_menu'><a href="/matches/new">Food/Beer Match</a></li>
-      <li class='nav_menu'><a href="/style_matches/new">Cuisine/Beer Style Match</a></li> 
-    </ul>
-  </div>
+    <div id='navcontainer-placeholder'></div>
+    <div id='navcontainer'>
+      <ul id="navlist">
+        <li class='nav_menu'><a href="/">Home</a></li>
+        <li class='nav_menu'><a href="/food_styles">Food Styles</a></li>
+        <li class='nav_menu'><a href="/beer_styles">Beer Styles</a></li>
+        <li class='nav_menu'><a href="/beers">Beers</a></li>
+        <li class='nav_menu'><a href="/matches/new">Food/Beer Match</a></li>
+        <li class='nav_menu'><a href="/style_matches/new">Cuisine/Beer Style Match</a></li> 
+      </ul>
+    </div>
 
-<%= yield %>
+    <%= yield %>
+
   <footer>
     
   </footer>
