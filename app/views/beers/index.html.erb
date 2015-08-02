@@ -29,7 +29,7 @@
         <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'form-select-b'}) %></li>
 
         <li><%= form.label :image, :class => 'input_label' %></li>
-        <li><%= form.text_field :image, :class => 'input1' %></li>
+        <li><%= form.file_field :image, :class => 'input1' %></li>
 
         <li>Select Flavour strength</li>
           <li>

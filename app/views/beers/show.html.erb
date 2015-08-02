@@ -12,7 +12,7 @@
     <p>Name   : <%= @beer.name %></p>
     <p><%= image_tag @beer.image , :class => "beer_img"%></p>
     <p>ABV    : <%= @beer.abv %></p>
-    <p>Style  : <%= @beer.beer_style.style %></p>
+    <p>Style  : <%= @beer.beer_style.style if @beer.beer_style%></p>
     <p>Tasting notes: <%= @beer.beer_note %></p>
   </div>
 </container>

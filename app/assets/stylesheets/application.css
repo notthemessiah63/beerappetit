@@ -11,6 +11,7 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
 header {
   background-image: url("header_image.png");
   background-color: #37424e;
